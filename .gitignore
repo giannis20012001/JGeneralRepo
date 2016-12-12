@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/
+JGeneralRepo.iml
+pom.xml
+src/main/resources/
+src/test/
+src/
