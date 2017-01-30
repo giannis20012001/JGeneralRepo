@@ -51,11 +51,11 @@
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
-                <!--<configuration>
+                <configuration>
                     <encoding>${encoding}</encoding>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>-->
+                    <source>${maven.compiler.source}</source>
+                    <target>${maven.compiler.target}</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>
