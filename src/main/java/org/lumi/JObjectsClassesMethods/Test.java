@@ -5,6 +5,9 @@ package org.lumi.JObjectsClassesMethods;
  */
 
 public class Test {
-    //
+    public static void main(String[] args) {
+        //
+
+    }
 
 }
