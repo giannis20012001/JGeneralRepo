@@ -1,4 +1,4 @@
-package org.lumi.JObjectsClassesMethods;
+package org.lumi.jobjectsmethodsandstrings;
 
 /**
  * Created by John Tsantilis (A.K.A lumi) on 30/1/2017.

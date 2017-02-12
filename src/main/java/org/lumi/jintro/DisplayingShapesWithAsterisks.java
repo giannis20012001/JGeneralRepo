@@ -1,4 +1,4 @@
-package org.lumi.JIntro;
+package org.lumi.jintro;
 
 /**
  * Created by John Tsantilis
