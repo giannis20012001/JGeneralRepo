@@ -11,6 +11,17 @@ public class Invoice {
 
     }
 
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "partNumber='" + partNumber + '\'' +
+                ", partDescription='" + partDescription + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                '}';
+
+    }
+
     //=================================================================================================================
     //getters & setters
     //=================================================================================================================
@@ -45,7 +56,10 @@ public class Invoice {
 
         }
 
-        this.quantity = quantity;
+        if (quantity >= 0) {
+            this.quantity = quantity;
+
+        }
 
     }
 
@@ -60,7 +74,10 @@ public class Invoice {
 
         }
 
-        this.price = price;
+        if (price >= 0) {
+            this.price = price;
+
+        }
 
     }
 
@@ -73,8 +90,25 @@ public class Invoice {
     public Invoice(String partNumber, String partDescription, int quantity, double price) {
         this.partNumber = partNumber;
         this.partDescription = partDescription;
-        this.quantity = quantity;
-        this.price = price;
+        if (quantity < 0) {
+            this.quantity = 0;
+
+        }
+
+        if (quantity >= 0) {
+            this.quantity = quantity;
+
+        }
+
+        if (price < 0) {
+            this.price = 0;
+
+        }
+
+        if (price >= 0) {
+            this.price = price;
+
+        }
 
     }
 
