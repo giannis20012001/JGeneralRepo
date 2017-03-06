@@ -33,7 +33,18 @@ public class SquareOfAsterisks {
 
                                 }
                                 else {
-                                    System.out.printf("*%n");
+                                    if (j == 1) {
+                                        System.out.printf("*");
+
+                                    }
+                                    else if (j == sideSize) {
+                                        System.out.printf("*");
+
+                                    }
+                                    else {
+                                        System.out.printf(" ");
+
+                                    }
 
                                 }
 
@@ -42,7 +53,7 @@ public class SquareOfAsterisks {
                             }
 
                             System.out.println();
-                            j=0;
+                            j=1;
                             i++;
 
                         }
