@@ -1,4 +1,4 @@
-package org.lumi.controlstatements;
+package org.lumi.controlstatements.partone;
 
 import javax.swing.JPanel;
 import java.awt.Graphics;

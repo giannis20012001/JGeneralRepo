@@ -1,4 +1,4 @@
-package org.lumi.controlstatements;
+package org.lumi.controlstatements.partone;
 
 import java.util.Scanner;
 

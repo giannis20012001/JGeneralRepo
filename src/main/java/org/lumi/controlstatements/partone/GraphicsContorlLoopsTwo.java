@@ -1,4 +1,4 @@
-package org.lumi.controlstatements;
+package org.lumi.controlstatements.partone;
 
 import javax.swing.JPanel;
 import java.awt.Graphics;
@@ -8,7 +8,7 @@ import java.awt.Graphics;
  * (i [dot] tsantilis [at] yahoo [dot] com A.K.A lumi) on 23/2/2017.
  */
 
-public class GraphicsContorlLoopsOne extends JPanel {
+public class GraphicsContorlLoopsTwo extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         int minWidth = 0;
@@ -23,10 +23,10 @@ public class GraphicsContorlLoopsOne extends JPanel {
             maxWidth = maxWidth - counter;
             minHeight = minHeight + counter;
             maxHeight = maxHeight - counter;
-            g.drawLine(0, 0, minWidth, maxHeight);
-            g.drawLine(getWidth(), getHeight(), minWidth, maxHeight);
-            g.drawLine(0, getHeight(), minWidth, minHeight);
-            g.drawLine(getWidth(), 0, minWidth, minHeight);
+            g.drawLine(0, minHeight, minWidth, getHeight());
+            g.drawLine(minWidth, getHeight(), getWidth(), maxHeight);
+            g.drawLine(getWidth(), maxHeight, maxWidth, 0);
+            g.drawLine(maxWidth, 0, 0, minHeight);
             counter--;
 
         }
