@@ -14,8 +14,8 @@ public class ConcentricCircles extends JPanel {
         super.paintComponent(g);
 
         for (int i = 0; i < 12; i++) {
-            g.drawOval(140 - (i * 5), 140 - (i * 5),
-                    10 + (i * 10), 10 + (i * 10));
+            g.drawOval(140 - (i * 10), 140 - (i * 10),
+                    20 + (i * 20), 20 + (i * 20));
 
         }
 
