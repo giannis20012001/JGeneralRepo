@@ -93,7 +93,15 @@ public class TrianglePrintingProgram {
 
                 }
                 else {
-                    System.out.printf("%-5s", " ");
+                    for (int k = 10; k > 1; k--) {
+                        System.out.print("");
+
+                    }
+
+                    for (int l = 1; l <= i; l++) {
+                        System.out.print("*");
+
+                    }
 
                 }
 

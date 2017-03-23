@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.lumi</groupId>
-    <artifactId>java</artifactId>
+    <artifactId>JGeneralRepo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>JGeneralRepo</name>
