@@ -15,7 +15,6 @@ public class AutoPolicyDriverApp {
         policyInNoFaultState(policy1);
         policyInNoFaultState(policy2);
 
-
     }
 
     public static void  policyInNoFaultState(AutoPolicy policy) {
@@ -25,7 +24,6 @@ public class AutoPolicyDriverApp {
                 policy.getAccountNumber(), policy.getMakeAndModel(),
                 policy.getState(),
                 (policy.isNoFaultState() ? "is": "is not"));
-
 
     }
 
