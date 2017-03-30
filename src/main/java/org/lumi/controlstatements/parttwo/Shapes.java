@@ -8,6 +8,7 @@ import java.awt.Graphics;
  * (i [dot] tsantilis [at] yahoo [dot] com A.K.A lumi) on 29/3/2017.
  */
 
+@SuppressWarnings("Duplicates")
 public class Shapes extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
@@ -48,4 +49,5 @@ public class Shapes extends JPanel {
     //==================================================================================================================
     //User's choice of which shape to draw
     private int choice;
+
 }

@@ -25,6 +25,7 @@ public class ShapesDriverApp {
         application.add(panel);
         application.setSize(300, 300);
         application.setVisible(true);
+
     }
 
 }
