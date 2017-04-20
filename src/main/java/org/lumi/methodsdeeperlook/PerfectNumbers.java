@@ -9,41 +9,50 @@ import java.util.Scanner;
 
 public class PerfectNumbers {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        System.out.printf("Please enter the number: ");
-        int number = input.nextInt();
-
-        System.out.println(isPerfect(number) ?
-                "Number " + number + " is a perfect Number!":
-                "Number " + number + " is not a perfect Number!");
-
-    }
-
-    private static int findFactors(int number) {
-        for (int i = 0; i < number; i++) {
-            if (number % i == 0) {
-                //
+        for (int i = 1; i < 10000; i++) {
+            if (isPerfect(i)) {
+                System.out.println("Number " + i + " is a perfect Number!");
 
             }
 
         }
 
-        return 0;
-
     }
 
     public static boolean isPerfect(int number) {
         int sum = 0;
+        previousFactor = 1;
 
-        for (int i = 0; i < number; i++) {
-            sum = sum + findFactors(number);
+        for (int i = 1; i < number; i++) {
+            if (findFactors(number)) {
+                sum = sum + previousFactor;
+                previousFactor++;
+
+            }
 
         }
 
-        findFactors(number);
+        if (sum == number) {
+            return true;
+
+        }
+
         return false;
 
     }
+
+    private static boolean findFactors(int number) {
+        if (number % previousFactor == 0) {
+            return true;
+
+        }
+
+        previousFactor++;
+
+        return false;
+
+    }
+
+    private static int previousFactor;
 
 }
