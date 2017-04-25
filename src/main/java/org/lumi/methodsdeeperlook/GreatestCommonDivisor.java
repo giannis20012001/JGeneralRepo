@@ -1,5 +1,7 @@
 package org.lumi.methodsdeeperlook;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Scanner;
 
 /**
@@ -16,31 +18,61 @@ public class GreatestCommonDivisor {
         System.out.printf("Please enter the divisor: ");
         int divisor = input.nextInt();
 
-        System.out.println("The GCD is " + findGCD(dividend, divisor));
+        //System.out.println("The GCD is " + findGCDA(dividend, divisor));
+
+        Instant start = Instant.now();
+        findGCDA(dividend, divisor);
+        Instant end = Instant.now();
+        System.out.println(Duration.between(start, end)); // prints PT1M3.553S
+
+        start = Instant.now();
+        findGCDB(dividend, divisor);
+        end = Instant.now();
+        System.out.println(Duration.between(start, end)); // prints PT1M3.553S
 
     }
 
-    public static int findGCD(int dividend, int divisor) {
-        int quotient = 0;
-        int remainder = 0;
+    //a --> dividend & b --> divisor
+    //Best results
+    public static int findGCDA(int a, int b) {
+        int r = 0;
+        int i = 1;
 
-        while (dividend - divisor >= divisor) {
-            dividend = dividend - divisor;
-
-        }
-
-        while (divisor - dividend >= dividend) {
-            divisor = divisor - dividend;
+        while ((a - (i * b)) > 0) {
+            r = a - (i * b);
+            i++;
 
         }
 
-        while (dividend - divisor >= divisor) {
-            dividend = dividend - divisor;
+        i = 1;
+        while ((b - (i * r)) > 0) {
+            a = b - (i * r);
+            i++;
 
         }
 
+        return a;
 
-        return divisor;
+    }
+
+    //a --> dividend & b --> divisor
+    public static int findGCDB(int a, int b) {
+        while (a > b) {
+            a = a - b;
+
+        }
+
+        while (b > 0) {
+            b = b - a;
+
+        }
+
+        while (a > b) {
+            a = a - b;
+
+        }
+
+        return a;
 
     }
 
