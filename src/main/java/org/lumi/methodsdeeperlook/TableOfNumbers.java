@@ -14,9 +14,9 @@ public class TableOfNumbers {
                 "Hexadecimal representation");
         for (int i = 0; i < 256; i++) {
             System.out.printf("%8s%22s%28s%29s%n", i,
-                    calculateBinary(i),
-                    calculateOctal(i),
-                    calculateHexadecimal(i));
+                    calculateBinaryB(i),
+                    calculateOctalB(i),
+                    calculateHexadecimalB(i));
 
         }
 
@@ -42,6 +42,11 @@ public class TableOfNumbers {
 
     }
 
+    private static String calculateBinaryB(int number) {
+        return Integer.toBinaryString(number);
+
+    }
+
     private static int calculateOctal(Integer number) {
         int counter = 0;
         int result = 0;
@@ -59,6 +64,11 @@ public class TableOfNumbers {
         }
 
         return result;
+
+    }
+
+    private static String calculateOctalB(Integer number) {
+        return Integer.toOctalString(number);
 
     }
 
@@ -113,6 +123,11 @@ public class TableOfNumbers {
         }
 
         return result;
+
+    }
+
+    private static String calculateHexadecimalB(Integer number) {
+        return Integer.toHexString(number).toUpperCase();
 
     }
 
