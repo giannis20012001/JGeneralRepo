@@ -175,7 +175,7 @@
 
    END OF TERMS AND CONDITIONS
 
-   Copyright 2017 John Tsantilis (i[dot]tsantilis[at]yahoo.com, A.K.A lumi).
+   Copyright 2017-18 John Tsantilis (i[dot]tsantilis[at]yahoo.com, A.K.A lumi).
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
